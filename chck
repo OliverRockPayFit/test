@@ -1,0 +1,30 @@
+var results = {};
+
+		var AM_init = 54;
+		var AM_end = 56;
+
+		for (i = AM_init; i <= AM_end; i=i+1){
+
+				print("Computing on AM " + i );
+				
+				var c1 = "variables" + i + ".51:500";
+				var c2 = "variables" + i + ".40:099";				
+
+				var out1 = "variables" + i + ".06:042";
+				var out2 = "variables" + i + ".29:999"
+				
+				results[i] = db.Employee.find(
+                {
+                    [c1]:{ $lt: 0 },
+										[c2]:{ $in: ["03", 03] },
+                    "originEmployee":{ $exists:false }
+                },
+                {
+                    [out1]:"",
+                    [out2]:""
+                }
+
+				).toArray()
+		}
+
+		results;
